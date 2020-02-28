@@ -22,7 +22,7 @@ var PersonalSchema = Schema({
         canton: {type: Schema.ObjectId, ref: 'canton'},
         autor: { type: Schema.ObjectId, ref: 'funcionario'},
         fecha_autor: { type: String, default: moment().unix()},
-        editor: { type: Schema.ObjectId, ref: 'funcionario'},
+        editor: String,
         fecha_editor: String,
         asignado: {type: Schema.ObjectId, ref: 'funcionario'},
         memorandum: String,

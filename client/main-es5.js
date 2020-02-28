@@ -8831,7 +8831,7 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "global", function () { return global; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             var global = {
-                //url: 'http://localhost:3800/api/'
+                // url: 'http://localhost:3800/api/'
                 url: 'http://64.227.9.151:3800/api/'
             };
             /***/ 

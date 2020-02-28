@@ -40,7 +40,7 @@ function savePER(req, res) {
                 PER.fecha_autor = moment().unix();
                 PER.editor = '';
                 PER.fecha_editor = '';
-                PER.asignado= params.asignado;
+                PER.asignado= null;
                 PER.memorandum = params.memorandum;
                 PER.codigoAP = params.codigoAP;
                 PER.activa = true;
