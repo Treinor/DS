@@ -38,8 +38,8 @@ function savePER(req, res) {
                 PER.canton = params.canton;
                 PER.autor = req.fun.sub;
                 PER.fecha_autor = moment().unix();
-                PER.editor = params.autor;
-                PER.fecha_editor = params.fecha_editor;
+                PER.editor = '';
+                PER.fecha_editor = '';
                 PER.asignado= params.asignado;
                 PER.memorandum = params.memorandum;
                 PER.codigoAP = params.codigoAP;
@@ -83,7 +83,6 @@ function updatePer(req, res) {
                 $or: [{ partida_individual: update.partida_individual},
                 ]
         }).exec((err, pers) => {
-
                 var per_isset = false;
                 pers.forEach((per) => {
                         if (per && per._id != per_id) per_isset = true;

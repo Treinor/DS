@@ -183,6 +183,17 @@ function cambiarEstado(req, res) {
                 return res.status(200).send({ Message: 'Funcionario editado con exito' });
         })
 }
+function cambiarrol(req, res) {
+        var id = req.body._id;
+        var role = req.body.role;
+        console.log(role);
+        
+        FUNC.findByIdAndUpdate(id, { role }, { new: true }, (err, response) => {
+                if (err) return res.status(500).send({ Message: 'Error al ejectuar la peticion... ', Error: err });
+                if (!response || response.length <= 0) return res.status(404).send({ Message: 'No se encuentra el funcionario' });
+                return res.status(200).send({ Message: 'Funcionario editado con exito' });
+        })
+}
 // Edicion de datos de funcionarios
 
 function updateFun(req, res) {
@@ -324,6 +335,7 @@ module.exports = {
         updateFuns,
         cambiarEstado,
         passwordChange,
-        passwordCompare
+        passwordCompare,
+        cambiarrol
         //getCountap
 }

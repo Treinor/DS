@@ -139,8 +139,9 @@ function estadoap(req, res) {
       
     var id = req.body._id;
     var activa = req.body.activa;
+    var fecha_activacion = req.body.fecha_activacion;
     //var fecha_activacion = moment().unix();
-    ADP.findByIdAndUpdate(id, {activa}, {new:true}, (err, response)=> {
+    ADP.findByIdAndUpdate(id, {activa, fecha_activacion}, {new:true}, (err, response)=> {
             if (err) return res.status(500).send({Message: 'Error al ejectuar la peticion... ', Error: err});
             if (!response || response.length <=0) return res.status(404).send({Message: 'No se encuentra la accion de personal'});
             return res.status(200).send({Message: 'Accion de personal editado con exito'});

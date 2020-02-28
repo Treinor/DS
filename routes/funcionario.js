@@ -15,6 +15,7 @@ api.get('/listarfuns', md_auth.ensureAuth, FUNController.getFuns);
 api.put('/actualizarfun/:id_fun', md_auth.ensureAuth, FUNController.updateFun);
 api.put('/actualizarfuns/:id_fun', md_auth.ensureAuth, FUNController.updateFuns);
 api.put('/cambiar-estado', FUNController.cambiarEstado);
+api.put('/cambiar-rol', FUNController.cambiarrol);
 api.put('/cambiar-password/:id', FUNController.passwordChange);
 api.post('/comprobar-password/:id',md_auth.ensureAuth, FUNController.passwordCompare);
 //api.get('/contadorap/:id_fun', md_auth.ensureAuth, FUNController.getCountap);
